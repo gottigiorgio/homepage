@@ -1,0 +1,6 @@
+node_modules/
+.next/
+public/
+deploy.sh
+next-env.d.ts
+tsconfig.tsbuildinfo

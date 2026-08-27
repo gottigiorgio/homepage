@@ -1,0 +1,137 @@
+@media (pointer: fine) {
+    body.custom-cursor-active,
+    body.custom-cursor-active * {
+        cursor: none !important;
+    }
+}
+
+::selection {
+    background-color: rgba(196, 181, 253, 0.45);
+    color: #0a0a0c;
+}
+
+.cursor-glow,
+.cursor-ring,
+.cursor-dot {
+    opacity: 0;
+}
+
+.cursor-glow.cursor-visible,
+.cursor-ring.cursor-visible,
+.cursor-dot.cursor-visible {
+    opacity: 1;
+}
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1400;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.16) 0%, rgba(139, 92, 246, 0.06) 40%, transparent 70%);
+    transform: translate3d(-50%, -50%, 0);
+    transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), width 300ms ease, height 300ms ease, background 300ms ease;
+    will-change: transform;
+}
+
+.cursor-glow.cursor-hover {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.24) 0%, rgba(139, 92, 246, 0.08) 45%, transparent 70%);
+}
+
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(139, 92, 246, 0.6);
+    pointer-events: none;
+    z-index: 1401;
+    transform: translate3d(-50%, -50%, 0);
+    transition: transform 450ms cubic-bezier(0.34, 1.56, 0.64, 1), width 200ms ease, height 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.cursor-ring.cursor-hover {
+    width: 56px;
+    height: 56px;
+    border-color: rgba(139, 92, 246, 0.9);
+    background-color: rgba(139, 92, 246, 0.1);
+}
+
+.cursor-ring.cursor-active {
+    width: 26px;
+    height: 26px;
+}
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #8b5cf6;
+    pointer-events: none;
+    z-index: 1402;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 200ms ease, width 150ms ease, height 150ms ease;
+}
+
+.cursor-dot.cursor-visible.cursor-hover {
+    opacity: 0;
+}
+
+/* Luce bluastra che percorre il bordo, sugli item interattivi (skill, card, ...) */
+@property --border-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.hover-glow {
+    position: relative;
+}
+
+.hover-glow::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+        from var(--border-angle),
+        transparent 0%,
+        transparent 82%,
+        rgba(139, 92, 246, 0.9) 92%,
+        rgba(216, 180, 254, 1) 96%,
+        transparent 100%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+    z-index: 1;
+}
+
+.hover-glow:hover::before,
+.hover-glow:focus-visible::before {
+    opacity: 1;
+    animation: border-chase 1.8s linear infinite;
+}
+
+@keyframes border-chase {
+    from {
+        --border-angle: 0deg;
+    }
+    to {
+        --border-angle: 360deg;
+    }
+}
