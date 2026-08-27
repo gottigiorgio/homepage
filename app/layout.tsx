@@ -7,7 +7,7 @@ import { profile } from "@/components/data/site"
 import "./globals.css"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gottigiorgio.dev"
-const title = `${profile.username} | ${profile.role}`
+const title = `${profile.username} | Software Developer`
 const description = profile.bio
 const bannerUrl = new URL("/gdp-banner-sparse.png", baseUrl).toString()
 
