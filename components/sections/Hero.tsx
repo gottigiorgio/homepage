@@ -104,9 +104,18 @@ export default function Hero() {
                                 md: "repeat(6, 1fr)",
                             },
                             columnGap: 2,
-                            rowGap: 4,
+                            rowGap: { xs: 5, md: 4 },
                             width: "100%",
                             maxWidth: 640,
+                            "@media (hover: none)": {
+                                "& .skill-label": {
+                                    opacity: 1,
+                                    whiteSpace: "normal",
+                                    width: 92,
+                                    textAlign: "center",
+                                    lineHeight: 1.25,
+                                },
+                            },
                         }}
                     >
                         {skills.map(({ label, icon: Icon }) => (
@@ -114,6 +123,7 @@ export default function Hero() {
                                 key={label}
                                 data-cursor-hover
                                 className="hover-glow"
+                                aria-label={label}
                                 sx={{
                                     position: "relative",
                                     display: "flex",
