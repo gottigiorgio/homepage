@@ -104,7 +104,7 @@ export default function Hero() {
                                 md: "repeat(6, 1fr)",
                             },
                             columnGap: 2,
-                            rowGap: { xs: 5, md: 4 },
+                            rowGap: { xs: 6, md: 4 },
                             width: "100%",
                             maxWidth: 640,
                             "@media (hover: none)": {
@@ -169,7 +169,7 @@ export default function Hero() {
                         ))}
                     </Box>
 
-                    <Stack direction="row" sx={{ gap: 1.5, mt: 1, flexWrap: "wrap", justifyContent: "center" }}>
+                    <Stack direction="row" sx={{ gap: 1.5, mt: 4, flexWrap: "wrap", justifyContent: "center" }}>
                         <Button
                             component="a"
                             href="#progetti"

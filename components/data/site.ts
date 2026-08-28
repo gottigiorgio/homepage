@@ -82,12 +82,12 @@ export const skills: Skill[] = [
     { label: "Python", icon: LanguagePython },
     { label: "Java", icon: LanguageJava },
     { label: "Node.js", icon: Nodejs },
-    { label: "MongoDB / PostgreSQL", icon: Database},
-    { label: "Discord.js", icon: Robot},    
+    { label: "C#", icon: LanguageCsharp },
+    { label: "Discord.js", icon: Robot},
     { label: "Next.js", icon: Web },
     { label: "Discord.py", icon: Robot},
     { label: "Minecraft", icon: Minecraft},
-    { label: "C#", icon: LanguageCsharp },
+    { label: "MongoDB / PostgreSQL", icon: Database},
     { label: ".Net Framework", icon: DotNet },
 ]
 
@@ -134,6 +134,14 @@ export const occupations: Occupation[] = [
             "Dittatore di una community discord, dedicata ai social del proprietario, al GDP ma sopratutto al supporto tra communty e membri.",
         href: "https://discord.gottigiorgio.dev",
         image: "/gdp-icon.png",
+    },
+    {
+        role: "Gestore Sviluppo Interno",
+        organization: "Foundation ITA",
+        description:
+            "Gestore dello sviluppo tecnico in una community basata sul folklore SCP.",
+        href: "https://discord.gg/KKKnsJSnjW",
+        image: "https://images-ext-1.discordapp.net/external/QzLhg7chSGrAbvPTnmYjk51ZZtIrtWk5Lk51FizzkS0/https/cdn.discordapp.com/icons/775487804540190780/a_8a965aa5e4a173415f8504368a8559f9.gif",
     },
     {
         role: "System Administrator",
