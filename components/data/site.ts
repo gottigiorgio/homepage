@@ -108,6 +108,14 @@ export const projects: Project[] = [
         image: "/gdp-icon.png",
         tags: ["Community", "Custom Software", "Infrastruttura"],
     },
+    {
+        title: "Lunaris Interactive WebMap",
+        description:
+            "Coming very soon...",
+        href: "#",
+        image: "./Lunaris_Map.png",
+        tags: ["Partner", "Sito Web", "Interattivo", "Dominio Gestito"],
+    },
 ]
 
 export const occupations: Occupation[] = [
