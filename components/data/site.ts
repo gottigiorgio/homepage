@@ -113,7 +113,7 @@ export const projects: Project[] = [
         description:
             "Coming very soon...",
         href: "#",
-        image: "./Lunaris_Map.png",
+        image: "/lunaris-map.png",
         tags: ["Partner", "Sito Web", "Interattivo", "Dominio Gestito"],
     },
 ]
