@@ -112,7 +112,7 @@ export const projects: Project[] = [
         title: "Lunaris Interactive WebMap",
         description:
             "Coming very soon...",
-        href: "#",
+        href: "https://map.lunaris-btkw.com",
         image: "/lunaris-map.png",
         tags: ["Partner", "Sito Web", "Interattivo", "Dominio Gestito"],
     },
