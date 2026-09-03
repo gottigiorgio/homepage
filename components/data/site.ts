@@ -24,7 +24,7 @@ import {
     Gitlab,
     Npm,
 } from "mdi-material-ui"
-import { siDiscord, siDiscorddotjs, siExpress, siFastapi, siMongodb, siNextdotjs, siPostgresql, siRedux } from "simple-icons/icons"
+import { siAmd, siCloudflare, siDiscord, siDiscorddotjs, siExpress, siFastapi, siIntel, siMongodb, siNextdotjs, siNvidia, siOpenvpn, siOpnsense, siPostgresql, siProxmox, siRedux, siTelegram, siUbiquiti } from "simple-icons/icons"
 import { createBrandIcon } from "@/components/base/BrandIcon"
 
 // Icone di brand non coperte (bene) da mdi-material-ui: usiamo Simple Icons
@@ -37,6 +37,15 @@ const MongodbIcon = createBrandIcon(siMongodb)
 const DiscordIcon = createBrandIcon(siDiscord)
 const DiscordjsIcon = createBrandIcon(siDiscorddotjs)
 const ReduxIcon = createBrandIcon(siRedux)
+const TelegramIcon = createBrandIcon(siTelegram)
+const CloudflareIcon = createBrandIcon(siCloudflare)
+const ProxmoxIcon = createBrandIcon(siProxmox)
+const UbiquitiIcon = createBrandIcon(siUbiquiti)
+const OPNSenseIcon = createBrandIcon(siOpnsense)
+const OpenVPNIcon = createBrandIcon(siOpenvpn)
+const IntelIcon = createBrandIcon(siIntel)
+const AmdIcon = createBrandIcon(siAmd)
+const NvidiaIcon = createBrandIcon(siNvidia)
 
 export type Skill = {
     label: string
@@ -114,10 +123,18 @@ export const skills: Skill[] = [
     { label: "Debian", icon: Debian, row: 1 },
     { label: "Ubuntu", icon: Ubuntu, row: 1 },
     { label: "Windows", icon: MicrosoftWindows, row: 1 },
+    { label: "Proxmox", icon: ProxmoxIcon, row: 1 },
+    { label: "Ubiquiti", icon: UbiquitiIcon, row: 1 },
+    { label: "OPNSense", icon: OPNSenseIcon, row: 1 },
+    { label: "OpenVPN", icon: OpenVPNIcon, row: 1 },
 
     // Riga 2: stack e strumenti specifici
     { label: "Node.js", icon: Nodejs, row: 2 },
     { label: "npm", icon: Npm, row: 2 },
+    { label: "Cloudflare", icon: CloudflareIcon, row: 2 },
+    { label: "Intel", icon: IntelIcon, row: 2 },
+    { label: "AMD", icon: AmdIcon, row: 2 },
+    { label: "Nvidia", icon: NvidiaIcon, row: 2 },
     { label: "React", icon: React, row: 2 },
     { label: "Redux", icon: ReduxIcon, row: 2 },
     { label: "Github", icon: Github, row: 2 },
@@ -233,6 +250,6 @@ export const contacts: Contact[] = [
         label: "Telegram",
         value: "gottigiorgio",
         href: "https://t.me/gottigiorgio",
-        icon: Send,
+        icon: TelegramIcon,
     },
 ]
