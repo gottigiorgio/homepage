@@ -21,6 +21,13 @@ import {
     Elephant,
     Api,
     Docker,
+    Xml,
+    LanguageHtml5,
+    LanguageCss3,
+    React,
+    Git,
+    Gitlab,
+    Npm,
 } from "mdi-material-ui"
 
 export type Skill = {
@@ -86,11 +93,15 @@ export const navLinks: NavLink[] = [
 
 export const skills: Skill[] = [
     // Riga 1: linguaggi e tecnologie generiche
+    { label: "HTML5", icon: LanguageHtml5, row: 1 },
+    { label: "CSS", icon: LanguageCss3, row: 1 },
     { label: "JavaScript", icon: LanguageJavascript, row: 1 },
     { label: "TypeScript", icon: LanguageTypescript, row: 1 },
     { label: "Python", icon: LanguagePython, row: 1 },
     { label: "Java", icon: LanguageJava, row: 1 },
     { label: "C#", icon: LanguageCsharp, row: 1 },
+    { label: "JSX", icon: Xml, row: 1 },
+    { label: "git", icon: Git, row: 1 },
     { label: "Docker", icon: Docker, row: 1 },
     { label: "Debian", icon: Debian, row: 1 },
     { label: "Ubuntu", icon: Ubuntu, row: 1 },
@@ -98,10 +109,15 @@ export const skills: Skill[] = [
 
     // Riga 2: stack e strumenti specifici
     { label: "Node.js", icon: Nodejs, row: 2 },
+    { label: "npm", icon: Npm, row: 2 },
+    { label: "React", icon: React, row: 2 },
+    { label: "Github", icon: Github, row: 2 },
+    { label: "Gitlab", icon: Gitlab, row: 2 },
     { label: "Next.js", icon: Web, row: 2 },
     { label: "Express.js", icon: Api, row: 2 },
     { label: "Discord.js", icon: Robot, row: 2 },
     { label: "Discord.py", icon: Robot, row: 2 },
+    { label: "FastAPI", icon: Api, row: 2 },
     { label: "PostgreSQL", icon: Elephant, row: 2 },
     { label: "MongoDB", icon: Database, row: 2 },
     { label: "Minecraft", icon: Minecraft, row: 2 },
