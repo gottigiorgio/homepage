@@ -1,6 +1,7 @@
+import type { ComponentType } from "react"
+import type { SvgIconProps } from "@mui/material"
 import {
     Email,
-    Forum,
     Github,
     LanguageCsharp,
     LanguageJava,
@@ -8,18 +9,12 @@ import {
     LanguagePython,
     LanguageTypescript,
     Nodejs,
-    Robot,
-    Web,
-    Database,
     Minecraft,
-    BriefcaseOutline,
     Send,
     DotNet,
     Debian,
     Ubuntu,
     MicrosoftWindows,
-    Elephant,
-    Api,
     Docker,
     Xml,
     LanguageHtml5,
@@ -29,10 +24,23 @@ import {
     Gitlab,
     Npm,
 } from "mdi-material-ui"
+import { siDiscord, siDiscorddotjs, siExpress, siFastapi, siMongodb, siNextdotjs, siPostgresql, siRedux } from "simple-icons/icons"
+import { createBrandIcon } from "@/components/base/BrandIcon"
+
+// Icone di brand non coperte (bene) da mdi-material-ui: usiamo Simple Icons
+// tramite il wrapper, cosi' restano intercambiabili con le altre nel resto del sito
+const NextjsIcon = createBrandIcon(siNextdotjs)
+const ExpressIcon = createBrandIcon(siExpress)
+const FastApiIcon = createBrandIcon(siFastapi)
+const PostgresqlIcon = createBrandIcon(siPostgresql)
+const MongodbIcon = createBrandIcon(siMongodb)
+const DiscordIcon = createBrandIcon(siDiscord)
+const DiscordjsIcon = createBrandIcon(siDiscorddotjs)
+const ReduxIcon = createBrandIcon(siRedux)
 
 export type Skill = {
     label: string
-    icon: typeof Web
+    icon: ComponentType<SvgIconProps>
     // Riga del marquee in cui compare: 1 = riga superiore, 2 = riga inferiore
     row: 1 | 2
 }
@@ -42,7 +50,7 @@ export type Project = {
     description: string
     href: string
     tags: string[]
-    icon?: typeof Web
+    icon?: ComponentType<SvgIconProps>
     image?: string
 }
 
@@ -50,7 +58,7 @@ export type Contact = {
     label: string
     value: string
     href?: string
-    icon: typeof Web
+    icon: ComponentType<SvgIconProps>
 }
 
 export type Occupation = {
@@ -58,7 +66,7 @@ export type Occupation = {
     organization: string
     description: string
     href: string
-    icon?: typeof Web
+    icon?: ComponentType<SvgIconProps>
     image?: string
 }
 
@@ -111,15 +119,16 @@ export const skills: Skill[] = [
     { label: "Node.js", icon: Nodejs, row: 2 },
     { label: "npm", icon: Npm, row: 2 },
     { label: "React", icon: React, row: 2 },
+    { label: "Redux", icon: ReduxIcon, row: 2 },
     { label: "Github", icon: Github, row: 2 },
     { label: "Gitlab", icon: Gitlab, row: 2 },
-    { label: "Next.js", icon: Web, row: 2 },
-    { label: "Express.js", icon: Api, row: 2 },
-    { label: "Discord.js", icon: Robot, row: 2 },
-    { label: "Discord.py", icon: Robot, row: 2 },
-    { label: "FastAPI", icon: Api, row: 2 },
-    { label: "PostgreSQL", icon: Elephant, row: 2 },
-    { label: "MongoDB", icon: Database, row: 2 },
+    { label: "Next.js", icon: NextjsIcon, row: 2 },
+    { label: "Express.js", icon: ExpressIcon, row: 2 },
+    { label: "Discord.js", icon: DiscordjsIcon, row: 2 },
+    { label: "Discord.py", icon: DiscordIcon, row: 2 },
+    { label: "FastAPI", icon: FastApiIcon, row: 2 },
+    { label: "PostgreSQL", icon: PostgresqlIcon, row: 2 },
+    { label: "MongoDB", icon: MongodbIcon, row: 2 },
     { label: "Minecraft", icon: Minecraft, row: 2 },
     { label: ".Net Framework", icon: DotNet, row: 2 },
 ]
@@ -212,7 +221,7 @@ export const contacts: Contact[] = [
     {
         label: "Discord",
         value: "@gottigiorgio",
-        icon: Forum,
+        icon: DiscordIcon,
     },
     {
         label: "GitHub",
