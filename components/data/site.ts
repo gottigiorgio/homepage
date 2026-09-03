@@ -24,7 +24,7 @@ import {
     Gitlab,
     Npm,
 } from "mdi-material-ui"
-import { siAmd, siCloudflare, siDiscord, siDiscorddotjs, siExpress, siFastapi, siIntel, siMongodb, siNextdotjs, siNvidia, siOpenvpn, siOpnsense, siPostgresql, siProxmox, siRedux, siTelegram, siUbiquiti } from "simple-icons/icons"
+import { siAmd, siCloudflare, siDiscord, siDiscorddotjs, siExpress, siFastapi, siIntel, siMongodb, siNextdotjs, siNvidia, siOpenvpn, siOpnsense, siOvh, siPostgresql, siProxmox, siRedux, siTelegram, siUbiquiti } from "simple-icons/icons"
 import { createBrandIcon } from "@/components/base/BrandIcon"
 
 // Icone di brand non coperte (bene) da mdi-material-ui: usiamo Simple Icons
@@ -46,6 +46,7 @@ const OpenVPNIcon = createBrandIcon(siOpenvpn)
 const IntelIcon = createBrandIcon(siIntel)
 const AmdIcon = createBrandIcon(siAmd)
 const NvidiaIcon = createBrandIcon(siNvidia)
+const OvhIcon = createBrandIcon(siOvh)
 
 export type Skill = {
     label: string
@@ -132,6 +133,7 @@ export const skills: Skill[] = [
     { label: "Node.js", icon: Nodejs, row: 2 },
     { label: "npm", icon: Npm, row: 2 },
     { label: "Cloudflare", icon: CloudflareIcon, row: 2 },
+    { label: "OVH", icon: OvhIcon, row: 2 },
     { label: "Intel", icon: IntelIcon, row: 2 },
     { label: "AMD", icon: AmdIcon, row: 2 },
     { label: "Nvidia", icon: NvidiaIcon, row: 2 },
