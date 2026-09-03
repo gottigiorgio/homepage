@@ -151,7 +151,7 @@ export const skills: Skill[] = [
     { label: "PostgreSQL", icon: PostgresqlIcon, row: 2 },
     { label: "MongoDB", icon: MongodbIcon, row: 2 },
     { label: "Spigot MC", icon: SpigotIcon, row: 2 },
-    { label: ".Net Framework", icon: DotNet, row: 2 },
+    { label: ".Net", icon: DotNet, row: 2 },
 ]
 
 export const projects: Project[] = [

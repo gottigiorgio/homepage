@@ -48,8 +48,8 @@ export default function Home() {
 
             <Box component="main" sx={{ flex: 1 }}>
                 <Hero />
-                <Projects />
                 <Occupations />
+                <Projects />
                 <Contact />
             </Box>
 

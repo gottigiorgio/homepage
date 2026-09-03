@@ -108,21 +108,8 @@ export default function Hero() {
                     </Typography>
                 </Stack>
             </Container>
-
-            <Box
-                sx={{
-                    width: "100%",
-                    my: { xs: 5, md: 6 },
-                    animation: `${pulseMarquee} 4s ease-in-out infinite`,
-                }}
-            >
-                <Stack sx={{ width: "100%", gap: 1.5 }}>
-                    <Marquee items={skillsRowOne} />
-                    <Marquee items={skillsRowTwo} reverse />
-                </Stack>
-            </Box>
-
-            <Container maxWidth="lg" sx={{ pb: { xs: 8, md: 10 } }}>
+            
+            <Container maxWidth="lg" sx={{ pb: { xs: 8, md: 8, marginTop: "2.5em" } }}>
                 <Stack direction="row" sx={{ gap: 1.5, flexWrap: "wrap", justifyContent: "center" }}>
                     <Button
                         component="a"
@@ -154,6 +141,19 @@ export default function Hero() {
                     </Button>
                 </Stack>
             </Container>
+
+            <Box
+                sx={{
+                    width: "100%",
+                    my: { xs: 5, md: 6 },
+                    animation: `${pulseMarquee} 4s ease-in-out infinite`,
+                }}
+            >
+                <Stack sx={{ width: "100%", gap: 1.5 }}>
+                    <Marquee items={skillsRowOne} />
+                    <Marquee items={skillsRowTwo} reverse />
+                </Stack>
+            </Box>
         </Box>
     )
 }
