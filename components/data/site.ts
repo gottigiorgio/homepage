@@ -15,11 +15,19 @@ import {
     BriefcaseOutline,
     Send,
     DotNet,
+    Debian,
+    Ubuntu,
+    MicrosoftWindows,
+    Elephant,
+    Api,
+    Docker,
 } from "mdi-material-ui"
 
 export type Skill = {
     label: string
     icon: typeof Web
+    // Riga del marquee in cui compare: 1 = riga superiore, 2 = riga inferiore
+    row: 1 | 2
 }
 
 export type Project = {
@@ -77,18 +85,27 @@ export const navLinks: NavLink[] = [
 ]
 
 export const skills: Skill[] = [
-    { label: "JavaScript", icon: LanguageJavascript },
-    { label: "TypeScript", icon: LanguageTypescript },
-    { label: "Python", icon: LanguagePython },
-    { label: "Java", icon: LanguageJava },
-    { label: "Node.js", icon: Nodejs },
-    { label: "C#", icon: LanguageCsharp },
-    { label: "Discord.js", icon: Robot},
-    { label: "Next.js", icon: Web },
-    { label: "Discord.py", icon: Robot},
-    { label: "Minecraft", icon: Minecraft},
-    { label: "MongoDB / PostgreSQL", icon: Database},
-    { label: ".Net Framework", icon: DotNet },
+    // Riga 1: linguaggi e tecnologie generiche
+    { label: "JavaScript", icon: LanguageJavascript, row: 1 },
+    { label: "TypeScript", icon: LanguageTypescript, row: 1 },
+    { label: "Python", icon: LanguagePython, row: 1 },
+    { label: "Java", icon: LanguageJava, row: 1 },
+    { label: "C#", icon: LanguageCsharp, row: 1 },
+    { label: "Docker", icon: Docker, row: 1 },
+    { label: "Debian", icon: Debian, row: 1 },
+    { label: "Ubuntu", icon: Ubuntu, row: 1 },
+    { label: "Windows", icon: MicrosoftWindows, row: 1 },
+
+    // Riga 2: stack e strumenti specifici
+    { label: "Node.js", icon: Nodejs, row: 2 },
+    { label: "Next.js", icon: Web, row: 2 },
+    { label: "Express.js", icon: Api, row: 2 },
+    { label: "Discord.js", icon: Robot, row: 2 },
+    { label: "Discord.py", icon: Robot, row: 2 },
+    { label: "PostgreSQL", icon: Elephant, row: 2 },
+    { label: "MongoDB", icon: Database, row: 2 },
+    { label: "Minecraft", icon: Minecraft, row: 2 },
+    { label: ".Net Framework", icon: DotNet, row: 2 },
 ]
 
 export const projects: Project[] = [

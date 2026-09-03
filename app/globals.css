@@ -135,3 +135,92 @@
         --border-angle: 360deg;
     }
 }
+
+/* Marquee delle skill: due righe a scorrimento continuo, direzioni opposte */
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.marquee::before,
+.marquee::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.14), transparent);
+    pointer-events: none;
+}
+
+.marquee::before {
+    top: 0;
+}
+
+.marquee::after {
+    bottom: 0;
+}
+
+.marquee:hover::before,
+.marquee:hover::after {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(139, 92, 246, 0.9),
+        rgba(216, 180, 254, 1),
+        rgba(139, 92, 246, 0.9),
+        transparent
+    );
+    background-size: 60% 100%;
+    animation: marquee-edge-glow 2.4s linear infinite;
+}
+
+.marquee:hover::after {
+    animation-direction: reverse;
+}
+
+@keyframes marquee-edge-glow {
+    from {
+        background-position: -60% 0;
+    }
+    to {
+        background-position: 160% 0;
+    }
+}
+
+.marquee-track {
+    --marquee-gap: 72px;
+    display: flex;
+    width: max-content;
+    gap: var(--marquee-gap);
+    animation-name: marquee-scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.marquee-track.marquee-reverse {
+    animation-direction: reverse;
+}
+
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
+    }
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    transition: transform 150ms ease;
+}
+
+.marquee-item:hover {
+    transform: scale(1.08);
+}

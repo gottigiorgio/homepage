@@ -4,7 +4,11 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material"
 import { keyframes } from "@emotion/react"
 import { ChevronDown, Github } from "mdi-material-ui"
 import Image from "next/image"
+import Marquee from "@/components/base/Marquee"
 import { profile, skills } from "@/components/data/site"
+
+const skillsRowOne = skills.filter((skill) => skill.row === 1)
+const skillsRowTwo = skills.filter((skill) => skill.row === 2)
 
 const pulseGlow = keyframes`
     0%, 100% {
@@ -26,6 +30,15 @@ const pulseAvatar = keyframes`
     }
 `
 
+const pulseMarquee = keyframes`
+    0%, 100% {
+        box-shadow: 0 0 40px rgba(139, 92, 246, 0.07);
+    }
+    50% {
+        box-shadow: 0 0 70px rgba(139, 92, 246, 0.16);
+    }
+`
+
 export default function Hero() {
     return (
         <Box id="home" sx={{ position: "relative", overflow: "hidden" }}>
@@ -44,7 +57,7 @@ export default function Hero() {
                 }}
             />
 
-            <Container maxWidth="lg" sx={{ pt: { xs: 10, md: 14 }, pb: { xs: 8, md: 10 } }}>
+            <Container maxWidth="lg" sx={{ pt: { xs: 10, md: 14 } }}>
                 <Stack sx={{ position: "relative", alignItems: "center", textAlign: "center", gap: 3 }}>
                     <Box
                         data-cursor-hover
@@ -93,112 +106,52 @@ export default function Hero() {
                     <Typography sx={{ color: "text.secondary", maxWidth: 620, lineHeight: 1.7 }}>
                         {profile.bio}
                     </Typography>
+                </Stack>
+            </Container>
 
-                    {/* Skill grid: solo icone, il nome compare in hover */}
-                    <Box
+            <Box
+                sx={{
+                    width: "100%",
+                    my: { xs: 5, md: 6 },
+                    animation: `${pulseMarquee} 4s ease-in-out infinite`,
+                }}
+            >
+                <Stack sx={{ width: "100%", gap: 1.5 }}>
+                    <Marquee items={skillsRowOne} />
+                    <Marquee items={skillsRowTwo} reverse />
+                </Stack>
+            </Box>
+
+            <Container maxWidth="lg" sx={{ pb: { xs: 8, md: 10 } }}>
+                <Stack direction="row" sx={{ gap: 1.5, flexWrap: "wrap", justifyContent: "center" }}>
+                    <Button
+                        component="a"
+                        href="#progetti"
+                        size="large"
+                        endIcon={<ChevronDown />}
+                        className="hover-glow"
+                        sx={{ overflow: "visible" }}
+                    >
+                        Vedi i progetti
+                    </Button>
+                    <Button
+                        component="a"
+                        href={profile.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="outlined"
+                        size="large"
+                        startIcon={<Github />}
+                        className="hover-glow"
                         sx={{
-                            display: "grid",
-                            gridTemplateColumns: {
-                                xs: "repeat(3, 1fr)",
-                                sm: "repeat(4, 1fr)",
-                                md: "repeat(6, 1fr)",
-                            },
-                            columnGap: 2,
-                            rowGap: { xs: 6, md: 4 },
-                            width: "100%",
-                            maxWidth: 640,
-                            "@media (hover: none)": {
-                                "& .skill-label": {
-                                    opacity: 1,
-                                    whiteSpace: "normal",
-                                    width: 92,
-                                    textAlign: "center",
-                                    lineHeight: 1.25,
-                                },
-                            },
+                            overflow: "visible",
+                            borderColor: "divider",
+                            color: "text.primary",
+                            "&:hover": { backgroundColor: "hover.main" },
                         }}
                     >
-                        {skills.map(({ label, icon: Icon }) => (
-                            <Box
-                                key={label}
-                                data-cursor-hover
-                                className="hover-glow"
-                                aria-label={label}
-                                sx={{
-                                    position: "relative",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    justifySelf: "center",
-                                    width: 56,
-                                    height: 56,
-                                    borderRadius: "14px",
-                                    border: "1px solid",
-                                    borderColor: "divider",
-                                    backgroundColor: "surface.main",
-                                    transition: "transform 150ms ease",
-                                    "&:hover": {
-                                        transform: "translateY(-2px)",
-                                    },
-                                    "&:hover .skill-label": {
-                                        opacity: 1,
-                                        transform: "translate(-50%, 0)",
-                                    },
-                                }}
-                            >
-                                <Icon sx={{ fontSize: 26, color: "accent.main" }} />
-                                <Typography
-                                    className="skill-label"
-                                    variant="caption"
-                                    sx={{
-                                        position: "absolute",
-                                        top: "calc(100% + 10px)",
-                                        left: "50%",
-                                        whiteSpace: "nowrap",
-                                        color: "text.secondary",
-                                        fontWeight: 600,
-                                        opacity: 0,
-                                        transform: "translate(-50%, 4px)",
-                                        transition: "opacity 180ms ease, transform 180ms ease",
-                                        pointerEvents: "none",
-                                    }}
-                                >
-                                    {label}
-                                </Typography>
-                            </Box>
-                        ))}
-                    </Box>
-
-                    <Stack direction="row" sx={{ gap: 1.5, mt: 4, flexWrap: "wrap", justifyContent: "center" }}>
-                        <Button
-                            component="a"
-                            href="#progetti"
-                            size="large"
-                            endIcon={<ChevronDown />}
-                            className="hover-glow"
-                            sx={{ overflow: "visible" }}
-                        >
-                            Vedi i progetti
-                        </Button>
-                        <Button
-                            component="a"
-                            href={profile.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="outlined"
-                            size="large"
-                            startIcon={<Github />}
-                            className="hover-glow"
-                            sx={{
-                                overflow: "visible",
-                                borderColor: "divider",
-                                color: "text.primary",
-                                "&:hover": { backgroundColor: "hover.main" },
-                            }}
-                        >
-                            GitHub
-                        </Button>
-                    </Stack>
+                        GitHub
+                    </Button>
                 </Stack>
             </Container>
         </Box>
