@@ -9,7 +9,7 @@ import "./globals.css"
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://gottigiorgio.dev"
 const title = `${profile.username} | Software Developer`
 const description = profile.bio
-const bannerUrl = new URL("/gdp-banner-sparse.png", baseUrl).toString()
+const bannerUrl = "https://cdn.gottigiorgio.dev/immagini/gdp/Banner.png"
 
 export const metadata: Metadata = {
     title,
