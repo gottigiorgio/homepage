@@ -212,7 +212,7 @@ export const occupations: Occupation[] = [
         description:
             "Gestore dello sviluppo tecnico in una community basata sul folklore SCP.",
         href: "https://discord.gg/KKKnsJSnjW",
-        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/delta-ita/Logo.gif",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/foundation/Logo.gif",
     },
     {
         role: "System Administrator",
