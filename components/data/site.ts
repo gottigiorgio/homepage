@@ -99,7 +99,7 @@ export const profile: Profile = {
     username: "gottigiorgio",
     role: "Software Developer, System Administrator, Tecnico e Consulente IT",
     bio: "Ciao! Io sono gottigiorgio (mi raccomando, tutto minuscolo). Sono un'appassionato di Informatica e videogiochi, con esperienza di sviluppo sia in ambito web/frontend, con JavaScript e TypeScript (Next.js), sia in ambito server/backend, con Python, Java e C#.",
-    avatar: "/pfp.png",
+    avatar: "https://cdn.gottigiorgio.dev/immagini/pfp.png",
     githubUrl: "https://github.com/gottigiorgio",
 }
 
@@ -160,7 +160,7 @@ export const projects: Project[] = [
         description:
             "Bot Discord per moderazione, utility ed esplorazione dell'Urban Dictionary, sviluppato e mantenuto interamente da me.",
         href: "https://urban.gottigiorgio.dev",
-        image: "/urban-boi.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/projects/urban-boi/Logo.png",
         tags: ["Discord Bot", "Discord.py", "Python"],
     },
     {
@@ -168,7 +168,7 @@ export const projects: Project[] = [
         description:
             "Il GDP: un ecosistema collaborativo indipendente di sviluppo software, centrato su una community dove clienti, sviluppatori e appassionati si uniscono.",
         href: "https://discord.gottigiorgio.dev",
-        image: "/gdp-icon.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
         tags: ["Community", "Custom Software", "Infrastruttura"],
     },
     {
@@ -176,7 +176,7 @@ export const projects: Project[] = [
         description:
             "Coming very soon...",
         href: "https://map.lunaris-btkw.com",
-        image: "/lunaris-map.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/lunaris/lim-logo.png",
         tags: ["Partner", "Sito Web", "Interattivo", "Dominio Gestito"],
     },
 ]
@@ -196,7 +196,7 @@ export const occupations: Occupation[] = [
         description:
             "Fondatore e sviluppatore principale dell'ecosistema GDP: gestione tecnica, community e collaborazioni.",
         href: "https://urban.gottigiorgio.dev/gdp",
-        image: "/gdp-icon.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
     },
     {
         role: "Lounge's Dictator",
@@ -204,7 +204,7 @@ export const occupations: Occupation[] = [
         description:
             "Dittatore di una community discord, dedicata ai social del proprietario, al GDP ma sopratutto al supporto tra communty e membri.",
         href: "https://discord.gottigiorgio.dev",
-        image: "/gdp-icon.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
     },
     {
         role: "Gestore Sviluppo Interno",
@@ -212,7 +212,7 @@ export const occupations: Occupation[] = [
         description:
             "Gestore dello sviluppo tecnico in una community basata sul folklore SCP.",
         href: "https://discord.gg/KKKnsJSnjW",
-        image: "https://images-ext-1.discordapp.net/external/QzLhg7chSGrAbvPTnmYjk51ZZtIrtWk5Lk51FizzkS0/https/cdn.discordapp.com/icons/775487804540190780/a_8a965aa5e4a173415f8504368a8559f9.gif",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/delta-ita/Logo.gif",
     },
     {
         role: "System Administrator",
@@ -220,7 +220,7 @@ export const occupations: Occupation[] = [
         description:
             "Gestore dell'infrastruttura tecnica in una community basata su Discord ed il mondo videoludico.",
         href: "https://discord.gg/d3U7PRKsJD",
-        image: "/DeltaITA.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/delta-ita/Logo.png",
     },
     {
         role: "Direttore Tecnico",
@@ -228,7 +228,7 @@ export const occupations: Occupation[] = [
         description:
             "Gestore dell'infrastruttura tecnica in una community basata sul Roleplay e la connessione con la community.",
         href: "https://discord.gg/mN9aRqrmrj",
-        image: "/Lunaris.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/lunaris/Logo.png",
     },
 ]
 
