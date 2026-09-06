@@ -192,7 +192,7 @@ export const occupations: Occupation[] = [
     },
     {
         role: "Founder & Current Owner",
-        organization: "gottigiorgio's Development Program (GDP)",
+        organization: "Gottigiorgio's Development Program (GDP)",
         description:
             "Fondatore e sviluppatore principale dell'ecosistema GDP: gestione tecnica, community e collaborazioni.",
         href: "https://urban.gottigiorgio.dev/gdp",
