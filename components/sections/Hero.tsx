@@ -83,6 +83,7 @@ export default function Hero() {
 
                     <Stack sx={{ gap: 0.5 }}>
                         <Typography
+                            component="h1"
                             sx={{
                                 fontWeight: 800,
                                 fontSize: { xs: 34, md: 48 },
@@ -93,6 +94,7 @@ export default function Hero() {
                             {profile.username}
                         </Typography>
                         <Typography
+                            component="p"
                             sx={{
                                 color: "accent.main",
                                 fontWeight: 600,

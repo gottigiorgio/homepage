@@ -69,9 +69,9 @@ export default function Navbar() {
                                 borderColor: "accent.main",
                             }}
                         >
-                            <Image src={profile.avatar} alt={profile.username} fill style={{ objectFit: "cover" }} />
+                            <Image src={profile.avatar} alt="" fill sizes="36px" style={{ objectFit: "cover" }} />
                         </Box>
-                        <Typography sx={{ fontWeight: 800, letterSpacing: -0.3 }} variant="h6">
+                        <Typography component="span" sx={{ fontWeight: 800, letterSpacing: -0.3 }} variant="h6">
                             {profile.username}
                         </Typography>
                     </Stack>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import React from "react"
 import { MuiThemeProvider } from "./providers/ThemeProvider"
 import { CssBaseline } from "@mui/material"
@@ -77,6 +77,11 @@ export const metadata: Metadata = {
         description,
         images: [bannerUrl],
     },
+}
+
+export const viewport: Viewport = {
+    themeColor: "#09090C",
+    colorScheme: "dark",
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

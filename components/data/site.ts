@@ -195,7 +195,7 @@ export const occupations: Occupation[] = [
         organization: "Gottigiorgio's Development Program (GDP)",
         description:
             "Fondatore e sviluppatore principale dell'ecosistema GDP: gestione tecnica, community e collaborazioni.",
-        href: "https://urban.gottigiorgio.dev/gdp",
+        href: "https://gdp.gottigiorgio.dev",
         image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
     },
     {
@@ -212,7 +212,7 @@ export const occupations: Occupation[] = [
         description:
             "Gestore dello sviluppo tecnico in una community basata sul folklore SCP.",
         href: "https://discord.gg/KKKnsJSnjW",
-        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/foundation/Logo.gif",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/partners/foundation/Logo.png",
     },
     {
         role: "System Administrator",

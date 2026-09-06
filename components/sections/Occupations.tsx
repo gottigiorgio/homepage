@@ -11,7 +11,7 @@ export default function Occupations() {
         <Box id="occupazioni" sx={{ py: { xs: 8, md: 10 } }}>
             <Container maxWidth="lg">
                 <Stack sx={{ alignItems: "center", textAlign: "center", gap: 1, mb: 5 }}>
-                    <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                    <Typography component="h2" variant="h4" sx={{ fontWeight: 800 }}>
                         Occupazioni
                     </Typography>
                     <Typography sx={{ color: "text.secondary", maxWidth: 520 }}>
@@ -84,8 +84,9 @@ export default function Occupations() {
                                             {occupation.image ? (
                                                 <Image
                                                     src={occupation.image}
-                                                    alt={occupation.organization}
+                                                    alt={`Logo di ${occupation.organization}`}
                                                     fill
+                                                    sizes="56px"
                                                     style={{ objectFit: "cover" }}
                                                 />
                                             ) : (
@@ -97,7 +98,7 @@ export default function Occupations() {
                                             {occupation.role}
                                         </Typography>
 
-                                        <Typography variant="body2" sx={{ fontWeight: 700, mt: 1 }}>
+                                        <Typography component="h3" variant="body2" sx={{ fontWeight: 700, mt: 1 }}>
                                             {occupation.organization}
                                         </Typography>
 

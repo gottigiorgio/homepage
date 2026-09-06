@@ -8,7 +8,7 @@ export default function Contact() {
         <Box id="contatti" sx={{ py: { xs: 8, md: 10 } }}>
             <Container maxWidth="lg">
                 <Stack sx={{ alignItems: "center", textAlign: "center", gap: 1, mb: 5 }}>
-                    <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                    <Typography component="h2" variant="h4" sx={{ fontWeight: 800 }}>
                         Contatti
                     </Typography>
                     <Typography sx={{ color: "text.secondary", maxWidth: 610 }}>
@@ -59,7 +59,7 @@ export default function Contact() {
                                     <Icon sx={{ fontSize: 22, color: "accent.main" }} />
                                 </Box>
                                 <Stack sx={{ minWidth: 0 }}>
-                                    <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                                    <Typography component="h3" variant="body2" sx={{ color: "text.secondary", fontWeight: 400 }}>
                                         {label}
                                     </Typography>
                                     <Typography sx={{ fontWeight: 600 }} noWrap>

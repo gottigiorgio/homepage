@@ -1,5 +1,6 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import Navbar from "@/components/base/Navbar"
+import Footer from "@/components/base/Footer"
 import Hero from "@/components/sections/Hero"
 import Projects from "@/components/sections/Projects"
 import Occupations from "@/components/sections/Occupations"
@@ -14,9 +15,12 @@ const sameAs = contacts
     .map((contact) => contact.href)
     .filter((href): href is string => typeof href === "string" && !href.startsWith("mailto:"))
 
-const jsonLd = {
+const personId = `${baseUrl}#person`
+
+const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": personId,
     name: profile.username,
     url: baseUrl,
     image: new URL(profile.avatar, baseUrl).toString(),
@@ -37,29 +41,55 @@ const jsonLd = {
     })),
 }
 
+// ProfilePage e' il tipo che Google si aspetta per la pagina personale di una
+// persona: dichiara esplicitamente che il soggetto della pagina e' la Person
+// qui sopra, invece di lasciarlo dedurre dal testo.
+const profilePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${baseUrl}#webpage`,
+    url: baseUrl,
+    name: `${profile.username} | Software Developer`,
+    description: profile.bio,
+    inLanguage: "it-IT",
+    mainEntity: { "@id": personId },
+    isPartOf: { "@id": `${baseUrl}#website` },
+}
+
+const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${baseUrl}#website`,
+    url: baseUrl,
+    name: profile.username,
+    description: profile.bio,
+    inLanguage: "it-IT",
+    publisher: { "@id": personId },
+}
+
 export default function Home() {
     return (
         <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh", bgcolor: "background.default" }}>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify([personJsonLd, profilePageJsonLd, websiteJsonLd]).replace(/</g, "\\u003c"),
+                }}
             />
             <Navbar />
 
-            <Box component="main" sx={{ flex: 1 }}>
+            <a className="skip-link" href="#contenuto">
+                Salta al contenuto
+            </a>
+
+            <Box component="main" id="contenuto" sx={{ flex: 1 }}>
                 <Hero />
                 <Occupations />
                 <Projects />
                 <Contact />
             </Box>
 
-            <Box component="footer" sx={{ borderTop: "1px solid", borderColor: "divider", py: 3 }}>
-                <Container maxWidth="lg">
-                    <Typography variant="body2" sx={{ color: "text.secondary", textAlign: "center" }}>
-                        {new Date().getFullYear()} &copy; gottigiorgio, tutti i diritti riservati.
-                    </Typography>
-                </Container>
-            </Box>
+            <Footer />
         </Box>
     )
 }

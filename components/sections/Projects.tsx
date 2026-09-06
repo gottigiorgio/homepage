@@ -23,7 +23,7 @@ export default function Projects() {
         <Box id="progetti" sx={{ py: { xs: 8, md: 10 } }}>
             <Container maxWidth="lg">
                 <Stack sx={{ alignItems: "center", textAlign: "center", gap: 1, mb: 5 }}>
-                    <Typography variant="h4" sx={{ fontWeight: 800 }}>
+                    <Typography component="h2" variant="h4" sx={{ fontWeight: 800 }}>
                         Progetti
                     </Typography>
                     <Typography sx={{ color: "text.secondary", maxWidth: 520 }}>
@@ -89,12 +89,12 @@ export default function Projects() {
                                         }}
                                     >
                                         {project.image ? (
-                                            <Image src={project.image} alt={project.title} fill style={{ objectFit: "cover" }} />
+                                            <Image src={project.image} alt={`Logo di ${project.title}`} fill sizes="44px" style={{ objectFit: "cover" }} />
                                         ) : (
                                             <Icon sx={{ fontSize: 24, color: "accent.main" }} />
                                         )}
                                     </Box>
-                                    <Typography sx={{ fontWeight: 700, flexGrow: 1 }}>
+                                    <Typography component="h3" sx={{ fontWeight: 700, fontSize: 16, flexGrow: 1 }}>
                                         {project.title}
                                     </Typography>
                                     <OpenInNew sx={{ fontSize: 18, color: "text.secondary" }} />

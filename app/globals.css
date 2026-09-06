@@ -1,3 +1,38 @@
+/* Link "salta al contenuto": invisibile finche' non riceve il focus da tastiera */
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -64px;
+    z-index: 2000;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background-color: #8b5cf6;
+    color: #0a0a0c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: top 150ms ease;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+/* Le ancore delle sezioni non devono finire sotto la navbar sticky */
+html {
+    scroll-padding-top: 88px;
+}
+
+/* Rispetta chi ha ridotto le animazioni a livello di sistema */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
 @media (pointer: fine) {
     body.custom-cursor-active,
     body.custom-cursor-active * {
