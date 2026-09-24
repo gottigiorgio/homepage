@@ -9,6 +9,7 @@ import { navLinks, profile } from "@/components/data/site"
 const ecosystemLinks = [
     { label: "Urban Boi", href: "https://urban.gottigiorgio.dev" },
     { label: "GDP", href: "https://urban.gottigiorgio.dev/gdp" },
+    { label: "EasyHook", href: "https://easyhook.gottigiorgio.dev" },
     { label: "Development Lounge", href: "https://discord.gottigiorgio.dev" },
     { label: "Status dei servizi", href: "https://status.gottigiorgio.dev" },
 ]
