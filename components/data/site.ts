@@ -164,6 +164,14 @@ export const projects: Project[] = [
         tags: ["Discord Bot", "Discord.py", "Python"],
     },
     {
+        title: "EasyHook",
+        description:
+            "Strumento pubblico per creare, modificare, inviare e gestire i messaggi di discord per webhook",
+        href: "https://easyhook.gottigiorgio.dev",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
+        tags: ["Web App", "Next.js", "Tool pubblico"],
+    },
+    {
         title: "Gottigiorgio's Development Program",
         description:
             "Il GDP: un ecosistema collaborativo indipendente di sviluppo software, centrato su una community dove clienti, sviluppatori e appassionati si uniscono.",
