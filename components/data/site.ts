@@ -168,8 +168,15 @@ export const projects: Project[] = [
         description:
             "Strumento pubblico per creare, modificare, inviare e gestire i messaggi di discord per webhook",
         href: "https://easyhook.gottigiorgio.dev",
-        image: "https://cdn.gottigiorgio.dev/immagini/gdp/Logo.png",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/projects/Easyhook.png",
         tags: ["Web App", "Next.js", "Tool pubblico"],
+    },
+    {
+        title: "Heimdallr",
+        description: "Il guardiano dei dati di tutti i clienti del GDP che desiderano backup remoti periodici. Questo fedele impiegato vi informerà anche tramite discord quando un backup va a buon fine o fallisce.",
+        href: "#",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/projects/Heimdallr.png",
+        tags: ["Agent", "Javascript", "Backup & Disaster Recovery"]
     },
     {
         title: "Gottigiorgio's Development Program",
