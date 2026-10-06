@@ -249,7 +249,13 @@ export const occupations: Occupation[] = [
 
 export const contacts: Contact[] = [
     {
-        label: "Email",
+        label: "Informazioni",
+        value: "info@gottigiorgio.dev",
+        href: "mailto:info@gottigiorgio.dev",
+        icon: Email,
+    },
+    {
+        label: "Business",
         value: "business@gottigiorgio.dev",
         href: "mailto:business@gottigiorgio.dev",
         icon: Email,

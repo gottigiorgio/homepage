@@ -78,6 +78,14 @@ export default function Footer() {
                                 Contatti
                             </Typography>
                             <MuiLink
+                                href="mailto:info@gottigiorgio.dev"
+                                variant="body2"
+                                underline="hover"
+                                sx={{ color: "text.secondary", "&:hover": { color: "accent.main" } }}
+                            >
+                                info@gottigiorgio.dev
+                            </MuiLink>
+                            <MuiLink
                                 href="mailto:business@gottigiorgio.dev"
                                 variant="body2"
                                 underline="hover"
