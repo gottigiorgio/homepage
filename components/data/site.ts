@@ -172,6 +172,13 @@ export const projects: Project[] = [
         tags: ["Web App", "Next.js", "Tool pubblico"],
     },
     {
+        title: "Bifröst",
+        description: "Bot discord dedicato al collegamento di due server discord! Un paio di comandi ed è possibile avere un ponte diretto tra due server, tutto in un canale!",
+        href: "https://discord.com/oauth2/authorize?client_id=1562044523314684034",
+        image: "https://cdn.gottigiorgio.dev/immagini/gdp/projects/bifrost/Logo.png",
+        tags: ["Bot Discord", "Python", "Bridge"]
+    },
+    {
         title: "Heimdallr",
         description: "Il guardiano dei dati di tutti i clienti del GDP che desiderano backup remoti periodici. Questo fedele impiegato vi informerà anche tramite discord quando un backup va a buon fine o fallisce.",
         href: "#",
